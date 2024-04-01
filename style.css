@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+  --main : #FFE5F8;
+  --txt : #120025;
+  --second : #120025;
+  --heading : #FFE5F8;
+  --inputBgc : #120025;
+  --themeBtn : #120025;
+  --boxShadow : rgba(0, 0, 0, .8);
+  --searchBg : rgba(0, 0, 0, 0.4);
+}
+
+:root .dark{
+  --main : #120025;
+  --txt : #FFE5F8;
+  --second : #FFE5F8;
+  --heading : #120025;
+  --inputBgc : #fff;
+  --searchBg : rgba(255, 255, 255, 0.4);
+  --themeBtn : #000;
+  --themeBtn : #FFE5F8;
+  --boxShadow : rgba(255, 255, 255,.8);
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: .2s linear all;
+}
+
+body{
+  color: var(--txt);
+  background-color: var(--main);
+  width: 100%;
+  height: 100vh;
+}
+
+h1{
+  text-align: center;
+  height: 130px;
+  width: 100%;
+  background-color: var(--second);
+  color: var(--heading);
+  padding-top: 50px;
+ user-select: none;
+}
+
+.container{
+ 
+ display: flex; 
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ flex-direction: column;
+}
+
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.search{
+  width: 88%;
+  height: 5rem;
+  background-color: var(--searchBg);
+  border: none;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+input{
+  width: 80%;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  margin: 8px;
+  background-color: var(--inputBgc);
+  cursor: pointer;
+  color: var(--main);
+}
+
+.searchBtn{
+  flex: 1;
+  margin: 0 8px 0 0;
+  height: 3rem;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--inputBgc);
+  cursor: pointer;
+}
+
+.float{
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeBtn);
+  box-shadow: 0px 0px 10px var(--boxShadow);
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 999;
+}
+
+.sun{
+  width: 25px;
+  margin: 5px;
+}
+
+.searchImg{
+  width: 22px;
+}
+
+.news-blog{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 8px;
+  flex-basis: 10px;
+  position: relative;
+}
+
+.blog-card{
+  max-width: 180px;
+  max-height: 350px;
+  border: 2px solid var(--second);
+  margin: 10px auto;
+  text-wrap: wrap;
+  word-wrap: wrap;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.title{
+  font-size: 18px;
+  margin: 5px 2px 5px 2px;
+  font-weight: 250px;
+  word-wrap: wrap;
+}
+
+.context{
+  font-size: 14px;
+  margin:8px 2px;
+  text-wrap: wrap;
+  text-align: left;
+  word-wrap: break-word;
+  
+}
+
+.blogImg{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.blog-card:hover{
+  box-shadow: 0px 0px 05px var(--boxShadow);
+  transform: scale(1.05)
+}
+
+/* currently more button is turn off */
+
+.more{
+  height: 2.5rem;
+  width: 6rem;
+  background: var(--second);
+  color: var(--main);
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 5px;
+  font-weight: bolder;
+  position: relative;
+  bottom:10px;
+  display: none;
+  margin: 15px auto 10px auto;
+  user-select: none;
+  transition:.2s linear all;
+}
+
+.more:active{
+  color: var(--second);
+  background-color: var(--main);
+}
